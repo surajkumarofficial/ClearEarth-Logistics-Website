@@ -212,7 +212,7 @@ export default function Scrollytelling() {
         <OverlayBlock 
           scrollYProgress={smoothProgress} 
           start={0.01} peak={0.1} end={0.19} 
-          position="left-10 top-1/2 -translate-y-1/2"
+          position="left-4 md:left-10 top-1/2 -translate-y-1/2"
           align="text-left"
           heading="PRECISION AT THE SOURCE"
           subheading="Your Cargo, Our Commitment."
@@ -223,8 +223,8 @@ export default function Scrollytelling() {
         <OverlayBlock 
           scrollYProgress={smoothProgress} 
           start={0.21} peak={0.3} end={0.39} 
-          position="right-10 bottom-20"
-          align="text-right"
+          position="left-4 md:left-auto md:right-10 bottom-10 md:bottom-20"
+          align="text-left md:text-right"
           heading="SEAMLESS SYNERGY"
           headingColor="text-black"
           subheading="Bridging Land and Sea."
@@ -235,7 +235,7 @@ export default function Scrollytelling() {
         <OverlayBlock 
           scrollYProgress={smoothProgress} 
           start={0.41} peak={0.5} end={0.59} 
-          position="left-10 top-32"
+          position="left-4 md:left-10 top-20 md:top-32"
           align="text-left"
           heading="THE ARTERY OF COMMERCE"
           subheading="Navigating the Last Mile."
@@ -246,8 +246,8 @@ export default function Scrollytelling() {
         <OverlayBlock 
           scrollYProgress={smoothProgress} 
           start={0.61} peak={0.7} end={0.79} 
-          position="right-20 top-1/2 -translate-y-1/2"
-          align="text-right"
+          position="left-4 md:left-auto md:right-20 top-1/2 -translate-y-1/2"
+          align="text-left md:text-right"
           heading="ENGINEERED ASCENT"
           headingColor="text-black"
           subheading="Where Infrastructure Meets Ambition."
@@ -267,7 +267,7 @@ export default function Scrollytelling() {
 
         {/* Loading Indicator */}
         {!isReady && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/50 text-sm font-medium tracking-widest z-50">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/50 text-xs md:text-sm font-medium tracking-widest z-50 whitespace-nowrap text-center">
             LOADING EXPERIENCE... {Math.min(100, Math.round((imagesLoaded / 100) * 100))}%
           </div>
         )}
@@ -316,16 +316,16 @@ function OverlayBlock({
   return (
     <motion.div 
       style={{ opacity, y }}
-      className={`absolute w-[340px] md:w-[480px] p-8 ${position} ${align} z-10 pointer-events-none`}
+      className={`absolute w-full max-w-[calc(100vw-2rem)] md:w-[480px] p-6 md:p-8 ${position} ${align} z-10 pointer-events-none`}
     >
       <div className="absolute inset-0 bg-glow-light -z-10 rounded-full blur-3xl opacity-60" />
-      <h2 className={`text-3xl md:text-5xl font-bold mb-2 text-glow-light tracking-tight leading-tight ${headingColor}`}>
+      <h2 className={`text-2xl md:text-5xl font-bold mb-2 text-glow-light tracking-tight leading-tight ${headingColor}`}>
         {heading}
       </h2>
-      <h3 className="text-xl md:text-2xl font-semibold text-[#0090FF] mb-4 tracking-wide">
+      <h3 className="text-lg md:text-2xl font-semibold text-[#0090FF] mb-4 tracking-wide">
         {subheading}
       </h3>
-      <p className="text-base md:text-lg text-slate-700 leading-relaxed font-light">
+      <p className="text-sm md:text-lg text-slate-700 leading-relaxed font-light">
         {copy}
       </p>
     </motion.div>
