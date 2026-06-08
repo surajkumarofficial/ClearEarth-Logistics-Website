@@ -129,9 +129,9 @@ export default function Home() {
             {/* Service Block 3 */}
             <div className="bg-white border border-slate-100 p-8 rounded-2xl flex flex-col justify-between hover:border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-snug">Turnkey Supply Chain Management</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-snug">ClearEarth Supply Chain Management</h3>
                 <p className="text-sm text-slate-500 font-light leading-relaxed mb-6">
-                  Turnkey logistics solutions managing every stage seamlessly. A single, accountable partnership covering your cargo's journey from factory origin to the end customer. We consolidate international freight, local customs brokerage, storage, and cross-border trucking into one unified, friction-free workflow.
+                  ClearEarth logistics solutions managing every stage seamlessly. A single, accountable partnership covering your cargo's journey from factory origin to the end customer. We consolidate international freight, local customs brokerage, storage, and cross-border trucking into one unified, friction-free workflow.
                 </p>
                 <ul className="space-y-2 mb-8 text-xs text-slate-600">
                   <li className="flex items-center gap-2">
